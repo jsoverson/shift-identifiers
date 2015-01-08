@@ -1,0 +1,16 @@
+#!/usr/bin/env node
+
+var fs = require('fs');
+
+var shiftIdentifiers = require('../dist');
+
+var bin = process.argv.shift();
+var script = process.argv.shift();
+var file = process.argv.shift();
+
+var source = fs.readFileSync(file).toString();
+
+console.log(shiftIdentifiers(source));
+
+
+
